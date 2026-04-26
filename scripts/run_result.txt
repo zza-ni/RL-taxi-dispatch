@@ -1,0 +1,106 @@
+# 아래는 colab 실험환경이 아니라 local mac Mini(M4)에서 실행한 결과임
+
+pip install -r requirements.txt                                              
+python scripts/run_q_learning.py
+python scripts/run_dqn.py
+python scripts/run_scalability.py
+Requirement already satisfied: numpy>=1.24 in ./.venv/lib/python3.9/site-packages (from -r requirements.txt (line 1)) (2.0.2)
+Requirement already satisfied: gymnasium>=0.29 in ./.venv/lib/python3.9/site-packages (from -r requirements.txt (line 2)) (1.1.1)
+Requirement already satisfied: matplotlib>=3.7 in ./.venv/lib/python3.9/site-packages (from -r requirements.txt (line 3)) (3.9.4)
+Requirement already satisfied: torch>=2.0 in ./.venv/lib/python3.9/site-packages (from -r requirements.txt (line 4)) (2.8.0)
+Requirement already satisfied: pandas>=2.0 in ./.venv/lib/python3.9/site-packages (from -r requirements.txt (line 5)) (2.3.3)
+Requirement already satisfied: importlib-metadata>=4.8.0 in ./.venv/lib/python3.9/site-packages (from gymnasium>=0.29->-r requirements.txt (line 2)) (8.7.1)
+Requirement already satisfied: typing-extensions>=4.3.0 in ./.venv/lib/python3.9/site-packages (from gymnasium>=0.29->-r requirements.txt (line 2)) (4.15.0)
+Requirement already satisfied: cloudpickle>=1.2.0 in ./.venv/lib/python3.9/site-packages (from gymnasium>=0.29->-r requirements.txt (line 2)) (3.1.2)
+Requirement already satisfied: farama-notifications>=0.0.1 in ./.venv/lib/python3.9/site-packages (from gymnasium>=0.29->-r requirements.txt (line 2)) (0.0.6)
+Requirement already satisfied: pyparsing>=2.3.1 in ./.venv/lib/python3.9/site-packages (from matplotlib>=3.7->-r requirements.txt (line 3)) (3.3.2)
+Requirement already satisfied: fonttools>=4.22.0 in ./.venv/lib/python3.9/site-packages (from matplotlib>=3.7->-r requirements.txt (line 3)) (4.60.2)
+Requirement already satisfied: importlib-resources>=3.2.0 in ./.venv/lib/python3.9/site-packages (from matplotlib>=3.7->-r requirements.txt (line 3)) (6.5.2)
+Requirement already satisfied: kiwisolver>=1.3.1 in ./.venv/lib/python3.9/site-packages (from matplotlib>=3.7->-r requirements.txt (line 3)) (1.4.7)
+Requirement already satisfied: pillow>=8 in ./.venv/lib/python3.9/site-packages (from matplotlib>=3.7->-r requirements.txt (line 3)) (11.3.0)
+Requirement already satisfied: cycler>=0.10 in ./.venv/lib/python3.9/site-packages (from matplotlib>=3.7->-r requirements.txt (line 3)) (0.12.1)
+Requirement already satisfied: contourpy>=1.0.1 in ./.venv/lib/python3.9/site-packages (from matplotlib>=3.7->-r requirements.txt (line 3)) (1.3.0)
+Requirement already satisfied: packaging>=20.0 in ./.venv/lib/python3.9/site-packages (from matplotlib>=3.7->-r requirements.txt (line 3)) (26.2)
+Requirement already satisfied: python-dateutil>=2.7 in ./.venv/lib/python3.9/site-packages (from matplotlib>=3.7->-r requirements.txt (line 3)) (2.9.0.post0)
+Requirement already satisfied: jinja2 in ./.venv/lib/python3.9/site-packages (from torch>=2.0->-r requirements.txt (line 4)) (3.1.6)
+Requirement already satisfied: sympy>=1.13.3 in ./.venv/lib/python3.9/site-packages (from torch>=2.0->-r requirements.txt (line 4)) (1.14.0)
+Requirement already satisfied: networkx in ./.venv/lib/python3.9/site-packages (from torch>=2.0->-r requirements.txt (line 4)) (3.2.1)
+Requirement already satisfied: fsspec in ./.venv/lib/python3.9/site-packages (from torch>=2.0->-r requirements.txt (line 4)) (2025.10.0)
+Requirement already satisfied: filelock in ./.venv/lib/python3.9/site-packages (from torch>=2.0->-r requirements.txt (line 4)) (3.19.1)
+Requirement already satisfied: tzdata>=2022.7 in ./.venv/lib/python3.9/site-packages (from pandas>=2.0->-r requirements.txt (line 5)) (2026.2)
+Requirement already satisfied: pytz>=2020.1 in ./.venv/lib/python3.9/site-packages (from pandas>=2.0->-r requirements.txt (line 5)) (2026.1.post1)
+Requirement already satisfied: zipp>=3.20 in ./.venv/lib/python3.9/site-packages (from importlib-metadata>=4.8.0->gymnasium>=0.29->-r requirements.txt (line 2)) (3.23.1)
+Requirement already satisfied: six>=1.5 in ./.venv/lib/python3.9/site-packages (from python-dateutil>=2.7->matplotlib>=3.7->-r requirements.txt (line 3)) (1.17.0)
+Requirement already satisfied: mpmath<1.4,>=1.1.0 in ./.venv/lib/python3.9/site-packages (from sympy>=1.13.3->torch>=2.0->-r requirements.txt (line 4)) (1.3.0)
+Requirement already satisfied: MarkupSafe>=2.0 in ./.venv/lib/python3.9/site-packages (from jinja2->torch>=2.0->-r requirements.txt (line 4)) (3.0.3)
+WARNING: You are using pip version 21.2.4; however, version 26.0.1 is available.
+You should consider upgrading via the '/Users/maengsu/Documents/Learning/RL-taxi-dispatch/.venv/bin/python3 -m pip install --upgrade pip' command.
+Number of states: 500
+Number of actions: 6
+Episode  500 | Reward:  -312.0 | Avg(100): -394.82 | Epsilon: 0.6702
+Episode 1000 | Reward:    -7.0 | Avg(100):  -78.80 | Epsilon: 0.4492
+Episode 1500 | Reward:   -50.0 | Avg(100):  -24.62 | Epsilon: 0.3010
+Episode 2000 | Reward:   -14.0 | Avg(100):   -6.75 | Epsilon: 0.2018
+Episode 2500 | Reward:    13.0 | Avg(100):   -1.20 | Epsilon: 0.1352
+Episode 3000 | Reward:     3.0 | Avg(100):    2.62 | Epsilon: 0.0906
+Episode 3500 | Reward:    14.0 | Avg(100):    4.84 | Epsilon: 0.0607
+Episode 4000 | Reward:    -3.0 | Avg(100):    5.24 | Epsilon: 0.0407
+Episode 4500 | Reward:     8.0 | Avg(100):    7.15 | Epsilon: 0.0273
+Episode 5000 | Reward:    10.0 | Avg(100):    6.76 | Epsilon: 0.0183
+Episode 5500 | Reward:     7.0 | Avg(100):    7.25 | Epsilon: 0.0123
+Episode 6000 | Reward:     8.0 | Avg(100):    7.75 | Epsilon: 0.0100
+Episode 6500 | Reward:    13.0 | Avg(100):    7.58 | Epsilon: 0.0100
+Episode 7000 | Reward:     7.0 | Avg(100):    6.90 | Epsilon: 0.0100
+Episode 7500 | Reward:     4.0 | Avg(100):    7.45 | Epsilon: 0.0100
+Episode 8000 | Reward:     6.0 | Avg(100):    6.67 | Epsilon: 0.0100
+Training finished.
+Best moving average reward: 8.23
+Average evaluation reward: 7.95
+Average evaluation steps : 13.04
+Success ratio (reward >= 0): 1.000
+High-quality episodes (reward >= 8): 0.520
+Number of states: 500
+Number of actions: 6
+Device: cpu
+Episode  100 | Reward:  -479.0 | Avg(100): -650.40 | Epsilon: 0.606
+Episode  200 | Reward:  -380.0 | Avg(100): -434.16 | Epsilon: 0.367
+Episode  300 | Reward:  -290.0 | Avg(100): -325.08 | Epsilon: 0.222
+Episode  400 | Reward:  -245.0 | Avg(100): -246.57 | Epsilon: 0.135
+Episode  500 | Reward:  -135.0 | Avg(100): -138.75 | Epsilon: 0.082
+Episode  600 | Reward:  -200.0 | Avg(100): -131.09 | Epsilon: 0.050
+Episode  700 | Reward:     1.0 | Avg(100):  -67.50 | Epsilon: 0.050
+Episode  800 | Reward:    12.0 | Avg(100):  -16.49 | Epsilon: 0.050
+Episode  900 | Reward:    10.0 | Avg(100):   -1.70 | Epsilon: 0.050
+Episode 1000 | Reward:     7.0 | Avg(100):    0.40 | Epsilon: 0.050
+Episode 1100 | Reward:     4.0 | Avg(100):    3.65 | Epsilon: 0.050
+Episode 1200 | Reward:     6.0 | Avg(100):    3.95 | Epsilon: 0.050
+Episode 1300 | Reward:     7.0 | Avg(100):    5.69 | Epsilon: 0.050
+Episode 1400 | Reward:    10.0 | Avg(100):    4.96 | Epsilon: 0.050
+Episode 1500 | Reward:     4.0 | Avg(100):    4.15 | Epsilon: 0.050
+Episode 1600 | Reward:     5.0 | Avg(100):    4.59 | Epsilon: 0.050
+Episode 1700 | Reward:   -24.0 | Avg(100):    4.02 | Epsilon: 0.050
+Episode 1800 | Reward:    10.0 | Avg(100):    5.26 | Epsilon: 0.050
+Episode 1900 | Reward:     9.0 | Avg(100):    4.56 | Epsilon: 0.050
+Episode 2000 | Reward:    12.0 | Avg(100):    4.98 | Epsilon: 0.050
+Episode 2100 | Reward:    10.0 | Avg(100):    5.47 | Epsilon: 0.050
+Episode 2200 | Reward:     5.0 | Avg(100):    4.95 | Epsilon: 0.050
+Episode 2300 | Reward:    -6.0 | Avg(100):    4.30 | Epsilon: 0.050
+Episode 2400 | Reward:     7.0 | Avg(100):    4.93 | Epsilon: 0.050
+Episode 2500 | Reward:    13.0 | Avg(100):    5.49 | Epsilon: 0.050
+Episode 2600 | Reward:     8.0 | Avg(100):    4.83 | Epsilon: 0.050
+Episode 2700 | Reward:     4.0 | Avg(100):    3.86 | Epsilon: 0.050
+Episode 2800 | Reward:     2.0 | Avg(100):    5.54 | Epsilon: 0.050
+Episode 2900 | Reward:    13.0 | Avg(100):    3.62 | Epsilon: 0.050
+Episode 3000 | Reward:     5.0 | Avg(100):    5.90 | Epsilon: 0.050
+Average evaluation reward: 5.34
+Average evaluation steps : 15.45
+
+===== Grid Size: 5x5 =====
+
+===== Grid Size: 10x10 =====
+
+===== Grid Size: 15x15 =====
+  grid_size  num_states  Q-learning avg reward  Q-learning avg steps  Q-table entries  DQN avg reward  DQN avg steps  DQN state dim  DQN params
+0       5x5         500                  -3.83                 22.10             3000            7.83          12.75            500       81414
+1     10x10        2000                -465.36                327.06            12000         -387.82         388.45           2000      273414
+2     15x15        4500               -1708.11                900.00            27000         -900.00         900.00           4500      593414
